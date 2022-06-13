@@ -1,0 +1,337 @@
+.App {
+  position: relative;
+  background-color: var(--primary-color);
+  font-family: var(--font-base);
+}
+
+.app__whitebg {
+  background-color: var(--white-color);
+}
+
+.app__primarybg {
+  background-color: var(--primary-color);
+}
+
+.app__container {
+  position: relative;
+  width: 100%;
+  max-width: 1250px;
+  min-height: 100vh;
+  margin: 0px auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  max-width: 1150px;
+  min-height: 100vh;
+  margin: 0px auto;
+  padding: 6rem 2rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 460px) {
+    padding: 6rem 1rem 2rem;
+  }
+}
+
+.sub-section {
+  position: relative;
+  width: 100%;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 0;
+}
+
+.section-title-01 {
+  font-size: 4.5em;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(71, 9, 71, 0.333) 70%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.5;
+
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+  @media screen and (max-width: 430px) {
+    font-size: 1.5rem;
+  }
+}
+.section-title-02 {
+  font-size: 2.5em;
+  font-weight: 700;
+  transform: translateY(-80px);
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
+    transform: translateY(-65px);
+  }
+  @media screen and (max-width: 460px) {
+    font-size: 1rem;
+    transform: translateY(-45px);
+  }
+}
+
+.section-title-02::after {
+  position: absolute;
+  width: 70px;
+  height: 5px;
+  right: 0;
+  bottom: 0;
+  background-color: #fb982f;
+}
+
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__wrapper {
+  position: relative;
+  flex-direction: column;
+}
+
+.copyright {
+  width: 100%;
+  padding: 2rem 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  p {
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
+}
+
+.head-text {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--black-color);
+  text-transform: capitalize;
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.7rem;
+  }
+
+  @media screen and (max-width: 460px) {
+    font-size: 1.5rem;
+  }
+}
+
+.medium-text {
+  font-size: 1.3em;
+  text-align: left;
+  //color: var(--primary-color);
+   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
+
+.bold-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--black-color);
+  text-align: left;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+  }
+}
+
+.app__social {
+  position: fixed;
+  top: 50vh;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 1rem;
+
+  div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    margin: 0.25rem 0;
+    border: 1px solid var(--lightGray-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease-in-out;
+
+    svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gray-color);
+    }
+
+    &:hover {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+
+      svg {
+        color: var(--white-color);
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 70px;
+      height: 70px;
+
+      margin: 0.5rem 0;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.app__navigation {
+  position: fixed;
+  top: 70vh;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 1rem;
+
+  .app__navigation-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cbcbcb;
+    margin: 0.5rem;
+
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .app__navigation,
+  .app__social {
+    display: none;
+  }
+
+  .copyright {
+    padding: 2rem;
+  }
+}
+
+.button {
+  background: linear-gradient(#111011 0%, #fb982f 99.36%);
+  box-shadow: 0px 20px 24px 3ox rgba(251, 161, 40, 0.42);
+  border: 1px solid transparent;
+  border-radius: 34px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 26px;
+  margin-right: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: ease 0.4s;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 460px) {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+.button:hover {
+  background: linear-gradient(#fb982f 0%, #111011 99.36%);
+}
+
+.scrollToTop-content{
+  width: 100vw;
+   position:fixed;
+   z-index: 9999999999;
+   padding: 20px;
+   bottom: 10px;
+}
+.scrollToTop-btn {
+  z-index: 9999999999999;
+ float:right;
+  width: 35px;
+  height: 35px;
+  background: #1d60cb;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.scrollToTop-btn.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.modal {
+  z-index: 99999;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: var(--bg-transparent-color);
+  backdrop-filter: blur(10px);
+}

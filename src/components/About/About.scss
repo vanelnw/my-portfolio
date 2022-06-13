@@ -1,0 +1,260 @@
+.app__about {
+  flex: 1;
+  gap: 40px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}
+
+.app__about-left {
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: unset;
+  }
+
+  @media screen and (max-width: 460px) {
+    width: unset;
+  }
+}
+
+.app__about-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: unset;
+    gap: 1rem;
+  }
+
+  // @media screen and (max-width: 460px) {
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: nowrap;
+  //   overflow-x: scroll;
+  //   padding: 20px 25px;
+
+  //   ::-webkit-scrollbar {
+  //     display: none;
+  //   }
+  // }
+}
+
+.app__about-card {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #2d2e31;
+  filter: drop-shadow(10px 0 20px black);
+  color: #9797a1;
+
+  max-width: 500px;
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    span {
+      font-size: 25px;
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px 10px;
+      width: 100%;
+      min-width: 0px;
+  }
+
+  @media screen and (max-width: 460px) {
+    padding: 30px;
+   
+    div {
+      width: 250px;
+    }
+  }
+}
+.app__about-card:hover {
+  filter: drop-shadow(0 0 2px black);
+
+  .learn-more-btn svg {
+    transform: translateX(10px);
+  }
+}
+
+.learn-more-btn {
+  color: var(--gray-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+
+  svg {
+    transition: 0.3s ease;
+  }
+}
+
+.a-image {
+  width: 70%;
+  aspect-ratio: 1.1;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, transparent, blue, transparent);
+
+  img {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: 0.6s;
+  }
+  .img:hover {
+    transform: rotate(0deg);
+  }
+}
+
+.app__about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+
+  h3,
+  h4 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  h4 {
+    font-size: 1.3em;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  a {
+    margin-top: 15px;
+    width: max-content;
+  }
+
+  .app__about-desc {
+    color: var(--gray-color);
+    font-size: var(--normal-font-size);
+    line-height: 30px;
+  }
+
+  @media screen and (max-width: 460px) {
+    width: unset;
+    padding: 0px;
+  }
+}
+
+.experience {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 30px 0px;
+  gap: 40px;
+  width: 75%;
+
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
+.achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 430px) {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+.acircle-container {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  //padding: 5px;
+  background: linear-gradient(to bottom, #87e6fb 0%, #ffc05c 100%);
+  box-shadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  margin-bottom: 1rem;
+}
+
+.acircle {
+  width: 85%;
+  height: 85%;
+  border-radius: 100%;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  background: white;
+  @media screen and (max-width: 430px) {
+    margin-bottom: 0;
+  }
+}
+
+.modal-body {
+  position: relative;
+  background: white;
+  max-width: 600px;
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+
+  h3 {
+    font-size: 2em;
+  }
+  h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin: 15px 0 10px;
+  }
+  ul > li {
+    margin-top: 15px;
+  }
+  ul > li > svg {
+    margin-right: 10px;
+    color: var(--secondary-color);
+  }
+
+  @media screen and (max-width: 430px) {
+    padding: 25px;
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
